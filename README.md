@@ -1,5 +1,8 @@
 # CloudFuse
 
+<img width="1920" height="1454" alt="Screemshot" src="https://github.com/user-attachments/assets/ceaec6d2-a9c0-46c6-9735-79a5c071fcc8" />
+
+
 A unified virtual drive: sign in once, and Google Drive, OneDrive, Dropbox and
 S3 show up as one filesystem. A policy engine decides where each file is
 placed (type, size, free capacity) — it can also stripe a large file across
