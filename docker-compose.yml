@@ -1,0 +1,46 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        DATABASE_URL: postgres://cloudfuse:cloudfuse@db:5432/cloudfuse
+    ports:
+      - "7010:7010"
+    environment:
+      PORT: 7010
+      HOST: 0.0.0.0
+      NODE_ENV: production
+      DATABASE_URL: postgres://cloudfuse:cloudfuse@db:5432/cloudfuse
+      BETTER_AUTH_URL: ${BETTER_AUTH_URL:-http://localhost:7010}
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?set BETTER_AUTH_SECRET in your .env — generate with: openssl rand -hex 32}
+      VITE_AUTH_ENABLED: ${VITE_AUTH_ENABLED:-true}
+      VITE_AUTH_MODE: ${VITE_AUTH_MODE:-standalone}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      MICROSOFT_CLIENT_ID: ${MICROSOFT_CLIENT_ID:-}
+      MICROSOFT_CLIENT_SECRET: ${MICROSOFT_CLIENT_SECRET:-}
+      MICROSOFT_TENANT_ID: ${MICROSOFT_TENANT_ID:-common}
+      DROPBOX_CLIENT_ID: ${DROPBOX_CLIENT_ID:-}
+      DROPBOX_CLIENT_SECRET: ${DROPBOX_CLIENT_SECRET:-}
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: cloudfuse
+      POSTGRES_PASSWORD: cloudfuse
+      POSTGRES_DB: cloudfuse
+    volumes:
+      - cloudfuse-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cloudfuse -d cloudfuse"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  cloudfuse-db:

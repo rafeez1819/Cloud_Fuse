@@ -1,0 +1,1178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ==== BASIC META ==== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sherin OS – Self-Upgrading offline AI with Zero-Payload Security, Multi-layer architecture, Emotional Voice System, and blockchain-grade audit trails.">
+  <meta name="keywords" content="Sherin OS, AI assistant, offline AI, emotional AI, edge AI, secure AI, blockchain audit, zero payload, self-upgrading AI, military-grade security">
+  <meta name="author" content="Captain / Sherin OS Team">
+  <meta name="robots" content="index, follow">
+
+  <!-- ==== TITLE ==== -->
+  <title>Sherin AI – Revolutionary Edge-AI Operating System</title>
+
+  <!-- ==== FAVICON ==== -->
+  <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
+
+  <!-- ==== OPEN GRAPH / SOCIAL SHARING ==== -->
+  <meta property="og:title" content="Sherin AI – Revolutionary Edge-AI Operating System">
+  <meta property="og:description" content="Experience Sherin OS: Self-Upgrading offline AI with emotional voice system and blockchain-grade security.">
+  <meta property="og:image" content="https://sherin.tech/Assets/og-image.png">
+  <meta property="og:url" content="https://sherin.tech/">
+  <meta property="og:type" content="website">
+
+  <!-- ==== TWITTER CARD ==== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sherin AI – Revolutionary Edge-AI Operating System">
+  <meta name="twitter:description" content="Experience Sherin OS: Self-Upgrading offline AI with emotional voice system and blockchain-grade security.">
+  <meta name="twitter:image" content="https://sherin.tech/Assets/og-image.png">
+
+  <!-- ==== GOOGLE ANALYTICS ==== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M0JG2MXSVF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M0JG2MXSVF');
+  </script>
+
+  <!-- ==== STRUCTURED DATA (JSON-LD) ==== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sherin OS",
+    "url": "https://sherin.tech/",
+    "image": "https://sherin.tech/Assets/og-image.png",
+    "description": "Self-Upgrading offline AI with Zero-Payload Security, Multi-layer architecture, Emotional Voice System, and blockchain-grade audit trails.",
+    "operatingSystem": "Cross-platform / Edge AI",
+    "applicationCategory": "AI Software",
+    "author": {
+      "@type": "Person",
+      "name": "Captain / Sherin OS Team"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- ==== YOUR STYLES ==== -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Intro Video Overlay */
+    #intro-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease;
+    }
+
+    #intro-overlay.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #intro-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Navigation */
+    .top-banner {
+      background: #000;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 80px;
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      width: 450px;
+      height: 200px;
+      object-fit: contain;
+      transform: translateY(15px);
+    }
+
+    .brand-name {
+      color: white;
+      font-size: 1.7rem;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+      text-shadow: 
+        0 0 5px rgba(255,255,255,0.6),
+        0 0 10px rgba(255,255,255,0.4),
+        0 0 15px rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+
+    .nav-links a:active {
+      color: #fff;
+      text-shadow: 
+        0 0 10px rgba(255,255,255,1),
+        0 0 20px rgba(255,255,255,0.8),
+        0 0 30px rgba(255,255,255,0.5);
+      transform: scale(1.08);
+      transition: all 0.1s ease;
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #fff;
+      background: none;
+      border: none;
+    }
+
+    /* Glass Effect */
+    .glass {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.18); 
+      border-radius: 16px;
+      box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.37),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .glass:hover {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+      box-shadow: 
+        0 12px 40px 0 rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 600px;
+      height: 600px;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><radialGradient id="glow"><stop offset="0%25" stop-color="%23fff" stop-opacity="0.3"/><stop offset="100%25" stop-color="%23000" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(%23glow)"/><text x="100" y="130" font-size="100" font-weight="bold" fill="%23fff" fill-opacity="0.1" text-anchor="middle" font-family="Arial">S</text></svg>') center/contain no-repeat;
+      opacity: 0.3;
+      z-index: 0;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      margin-bottom: 25px;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .hero .tagline {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: rgba(255,255,255,.9);
+      font-weight: 500;
+    }
+
+    .hero .subtitle {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.8;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all .3s;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+      backdrop-filter: blur(10px);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(255,255,255,.2);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+      backdrop-filter: blur(10px);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.2);
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+      border-color: rgba(255,255,255,.4);
+    }
+
+    section {
+      padding: 100px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 60px;
+      color: rgba(255,255,255,.6);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Metrics Section */
+    .metrics-container {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      height: 150px;
+      background: linear-gradient(to bottom, #111, #222);
+      margin: 60px 0;
+    }
+
+    .scroll-track {
+      display: flex;
+      animation: scroll 25s linear infinite;
+    }
+
+    .metric-box {
+      flex: 0 0 auto;
+      width: 180px;
+      height: 100px;
+      margin: 0 10px;
+      background: #2a2a2a;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #fff;
+      box-shadow: 0 0 8px rgba(255,255,255,0.1);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Content Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .content-card {
+      padding: 35px;
+      text-align: left;
+    }
+
+    .content-card h3 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .content-card p {
+      color: rgba(255,255,255,.7);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .content-card ul {
+      margin-top: 15px;
+      padding-left: 20px;
+      color: rgba(255,255,255,.7);
+    }
+
+    .content-card ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Security Features */
+    .security-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .security-item {
+      padding: 30px;
+      border-left: 3px solid rgba(74,222,128,.5);
+    }
+
+    .security-item h4 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .security-item p {
+      color: rgba(255,255,255,.7);
+      font-size: 14px;
+    }
+
+    /* Mobile Responsive */
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 48px;
+      }
+      
+      .hero .tagline {
+        font-size: 20px;
+      }
+      
+      .section-title {
+        font-size: 36px;
+      }
+      
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.95);
+        padding: 20px 0;
+      }
+      
+      .nav-links.open {
+        display: flex;
+      }
+      
+      .mobile-menu {
+        display: block;
+      }
+      
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .metric-box {
+        min-width: 150px;
+      }
+
+      .nav-container {
+        padding: 0 20px;
+      }
+
+      .logo {
+        width: 100px;
+        height: 60px;
+      }
+
+      .brand-name {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Video Overlay -->
+  <div id="intro-overlay">
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="Assets/Intro/intro.mp4" type="video/mp4" media="(min-width: 769px)">
+      <source src="Assets/Intro/intro_wap.mp4" type="video/mp4" media="(max-width: 768px)">
+      Your browser does not support the video tag.
+    </video>
+
+    <audio id="intro-audio" autoplay>
+      <source src="Assets/Audio/intro.aac" type="audio/aac">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="top-banner">
+    <div class="nav-container">
+      <div class="left-section">
+        <img 
+          src="Assets/Logo/Logo.png" 
+          alt="Logo" 
+          class="logo"
+        />
+        
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#model">Model</a></li>
+        <li><a href="#os">Operating System</a></li>
+        <li><a href="#filesystem">File System</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#hololink">HoloLink</a></li>
+      </ul>
+
+      <button class="mobile-menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero glass">
+    <div class="hero-content">
+      <h1>Sherin AI</h1>
+      <h2>The Future of Secure Artificial Intelligence</h2>
+      <p class="tagline">Zero-Payload Model • Self-Upgrading Intelligence • Military-Grade Security</p>
+      <p class="subtitle">
+        Sherin AI combines a multi layer neural architecture with blockchain-grade security. 
+        Every byte encrypted, every action audited, every upgrade is signed. 
+        <strong>Built for a world that demands privacy, safety, and intelligence.</strong>
+        <br><i>"Safety is sacred. Quality is Sherin signature. Integrity is the architecture."</i></br>
+      </p>
+      <div class="cta-buttons">
+        <a href="#architecture" class="btn btn-primary">Explore Architecture</a>
+        <a href="#model" class="btn btn-primary">View Model</a>
+      </div>
+    </div>
+  </section>
+
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Sherin AI</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    /* Core Metrics Header */
+    .core-header {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 12px 25px;
+      width: fit-content;
+      margin: 20px auto;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      backdrop-filter: blur(15px);
+      transition: all 0.3s ease;
+    }
+
+    .core-header:hover {
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 0 25px rgba(255,255,255,0.2);
+    }
+
+    /* Scrolling dependency container */
+    .metrics-container {
+      width: 100%;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      padding: 12px 0;
+      position: relative;
+    }
+
+    /* Track (the scrolling row) */
+    .scroll-track {
+      display: flex;
+      gap: 20px;
+      animation: scrollLoop 30s linear infinite;
+    }
+
+    /* Each metric box */
+    .metric-box {
+      min-width: 150px;
+      text-align: center;
+      padding: 15px 20px;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      animation: pulseGlow 3s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .metric-box small {
+      display: block;
+      font-size: 12px;
+      opacity: 0.8;
+      margin-top: 5px;
+    }
+
+    .metric-box:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes scrollLoop {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.2), inset 0 0 5px rgba(255,255,255,0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), inset 0 0 10px rgba(255,255,255,0.6);
+        border-color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Static Core Header -->
+  <div class="core-header">Core Metrics</div>
+
+  <!-- Scrolling Dependencies -->
+  <div class="metrics-container">
+    <div class="scroll-track">
+      <!-- Original Set -->
+      <div class="metric-box">0 Milli-Sec<br><small>Latency</small></div>
+      <div class="metric-box">99.01%<br><small>Malware Block</small></div>
+      <div class="metric-box">60-Sec<br><small>Heartbeat</small></div>
+      <div class="metric-box">0.5 GB<br><small>GPU Required</small></div>
+      <div class="metric-box">1 GB<br><small>OS Footprint</small></div>
+      <div class="metric-box">4 GB<br><small>RAM Required</small></div>
+      <div class="metric-box">24/7<br><small>Real-World Vision</small></div>
+      <div class="metric-box">SOS<br><small>Zero Signal Support</small></div>
+      <div class="metric-box">Safe<br><small>Self-Protection System</small></div>
+      <div class="metric-box">SHFS<br><small>Eliminating Antivirus</small></div>
+      <div class="metric-box">Sherin Signal<br><small>Forensic Integrity</small></div>
+      <div class="metric-box">Sherin Intelligence<br><small>Emotional Connects</small></div>
+      <div class="metric-box">Zero Signal<br><small>Data Transfer</small></div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="metric-box">0 Milli-Sec<br><small>Latency</small></div>
+      <div class="metric-box">99.01%<br><small>Malware Block</small></div>
+      <div class="metric-box">60-Sec<br><small>Heartbeat</small></div>
+      <div class="metric-box">0.5 GB<br><small>GPU Required</small></div>
+      <div class="metric-box">1 GB<br><small>OS Footprint</small></div>
+      <div class="metric-box">4 GB<br><small>RAM Required</small></div>
+      <div class="metric-box">24/7<br><small>Real-World Vision</small></div>
+      <div class="metric-box">SOS<br><small>Zero Signal Support</small></div>
+      <div class="metric-box">Safe<br><small>Self-Protection System</small></div>
+      <div class="metric-box">SHFS<br><small>Eliminating Antivirus</small></div>
+      <div class="metric-box">Sherin Signal<br><small>Forensic Integrity</small></div>
+      <div class="metric-box">Sherin Intelligence<br><small>Emotional Connects</small></div>
+      <div class="metric-box">Zero Signal<br><small>Data Transfer</small></div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+  <!-- Architecture Section -->
+  <section id="architecture" class="glass">
+    <h2 class="section-title">Layered Neural Architecture</h2>
+    <p class="section-subtitle">
+      <i>Sherin is a fully self-upgrading AI Model + OS + File System that merges intelligent automation, Input flows, Emotion & Human Experience into one seamless ecosystem through the classification, memory, reasoning, and execution layers.</i>
+    </p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sherin AI</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+ /* Normal state of card */
+        .content-card {
+            background: rgba(50, 50, 50, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px;
+            max-width: 400px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        /* Hover state - glass effect */
+        .content-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-grid">
+      <div class="content-card glass">
+        <h3>Multi-Layered Memory</h3>
+        <p>From deep context awareness to intelligent decision-making, Sherin OS leverages built-in audit trails for full integrity.</p>
+      </div>
+
+      <div class="content-card glass">
+        <h3>Zero Payload</h3>
+        <p>Model solving task from raw context to actionable decisions, with built-in secure auditing.</p>
+      </div>
+
+      <div class="content-card glass">
+        <h3>Self-Developing Model</h3>
+        <p>Sherin’s core can autonomously evolve, improve, and update itself without human or developer intervention.</p>
+      </div>
+
+      <div class="content-card glass">
+        <h3>60-Sec Heartbeat</h3>
+        <p>Sherin actively communicates and updates like Humans at regular intervals, without waiting for user queries.</p>
+      </div>
+
+      <div class="content-card glass">
+        <h3>Avatar System</h3>
+        <p>Emotional TTS with Opus 48kHz audio, lip-sync animation, and consent-locked real avatars.</p>
+      </div>
+
+      <div class="content-card glass">
+        <h3>Core-Level Protection</h3>
+        <p>Sherin autonomously protects itself and all user data from attacks, viruses, and threats without relying on any third-party licenses or antivirus software.</p>
+      </div>
+
+      <div class="content-card glass">
+        <h3>Bot Network </h3>
+        <p>From simple to complex tasks, Sherin produces dozens to hundreds of outcomes instantly in milliseconds.</p>
+      </div>
+
+	<div class="content-card glass">
+        <h3>Model Creation</h3>
+        <p>Begins with a PowerShell-based core file generation. Self Creation, structuring, and folder arrangement are autonomously handled by the model itself..</p>
+       </div>
+
+
+      <div class="content-card glass">
+        <h3>Port Routing</h3>
+        <p>All tasks are executed through a carefully designed layered architecture, ensuring collision-free operation and precise, task-specific output generation.</p>
+      </div>
+    </div>
+  </section>
+</body>
+
+  <!-- Model Section -->
+  <section id="model" class="glass">
+    <h2 class="section-title">Sherin Model System</h2>
+    <p class="section-subtitle"><i>The Sherin model operates with Zero Payload, performing at full power using as little as 0.5 GPU. It is designed to run even on small or low-power devices — no workstation, no cloud dependency, no latency. The model is multi-times faster and more accurate than conventional systems, constantly self-learning and adapting without manual updates."</i></p>
+
+    <div class="content-grid">
+      <div class="content-card glass">
+        <h3>🧠 Architecture</h3>
+        <p>Sherin is a fully autonomous AI, developed entirely from scratch without relying on any external LLMs, GGUF models, or third-party frameworks.</p>
+        <ul>
+          <li>Token context: 8,192 window</li>
+          <li>Inference: Alone</li>
+          <li>Quantization: Performance/Compression & Optimization itself </li>
+        </ul>
+      </div>
+
+      <div class="content-card glass">
+        <h3>🔄 Self-Decision Making </h3>
+        <p>Sherin learns and upgrades itself automatically, making intelligent decisions while fully respecting user Safety, Policies and privacy-first, without traditional training.</p>
+        <ul>
+          <li>Ed25519 signature verification</li>
+          <li>Automatic rollback on failure</li>
+          <li>Zero-downtime deployment</li>
+        </ul>
+      </div>
+
+      <div class="content-card glass">
+        <h3>⚡ Performance</h3>
+        <p>Sherin runs efficiently on any device, requiring only 4 GB of RAM, 2.5 GB of storage with 0.5 GB GPU and delivers lightning-fast responses under 100 ms.</p>
+        <ul>
+          <li>Response time: 10 x to 70 x faster than teaching model</li>
+          <li>Memory: 4 GB RAM required for model communication</li>
+          <li>Storage: User data stored on user devices</li>
+        </ul>
+      </div>
+
+  
+    </div>
+  </section>
+
+<!-- Operating System -->
+  <section id="os" class="glass">
+    <h2 class="section-title">🕊️ Sherin Operating System 🕊️</h2>
+    <p class="section-subtitle">
+🕊️ Sherin OS is the world's first single-page AI Operating System.🕊️
+ <br>  <i>Lightweight kernel designed for AI-first computing</i> </br>
+  Engineered for absolute independence, runs entirely without installation or platform dependencies like Windows, macOS, Linux, Android, or iOS.
+  Sherin OS operates as a self-contained universal environment, capable of executing directly within any browser or device, even without an underlying operating system.
+   </p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sherin AI</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+ /* Normal state of card */
+        .content-card {
+            background: rgba(50, 50, 50, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px;
+            max-width: 400px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        /* Hover state - glass effect */
+        .content-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-grid">
+      <div class="content-card glass">
+        <h3>🖥️ Kernel Design</h3>
+        <p>Micro-Kernel Architecture: Modular, bot-based services with minimal overhead.</p>
+        <ul>
+          <li>Total Size: 1 GB</li>
+          <li>Boot Time: Instant (0 seconds)</li>
+          <li>Universal Compatibility: Runs on any device.</li>
+        </ul>
+      </div>
+
+      <div class="content-card glass">
+        <h3>⚙️ Hardware Support</h3>
+        <p>Works on USB drives, laptops, and bare-metal microcontrollers.</p>
+        <ul>
+          <li>No host OS required — fully self-contained.</li>
+          <li>TPM 2.0 Integration for secure hardware-based trust.</li>
+          <li>Peripheral Auto-Detection for plug-and-play functionality.</li>
+        </ul>
+      </div>
+
+<div class="content-card glass">
+        <h3>💺 FTP Access OS</h3>
+        <p>Control your device with voice commands.</p>
+        <ul>
+          <li>Voice-controlled device operation.</li>
+          <li>24/7 autonomous execution of user commands.</li>
+          <li>Send emails, prepare documents, control devices, post images.</li>
+          <li>All communication with user will logged with timestamps.</li>
+        </ul>
+      </div>
+
+<div class="content-card glass">
+        <h3>🎙️ Default Noise-Control Enhancement Engine</h3>
+        <p>Runs on USB drives, Laptops, and bare-metal microcontrollers.</p>
+        <ul>
+          <li>Smart Ambient Filter.</li>
+          <li>Real-Time Response.</li>
+          <li>Self-Adjusting Intelligence.</li>
+	  <li>Core-Level Protection.</li>
+	  <li>Offline Ready.</li>
+	  <li>Studio-Grade Clarity.</li>
+        </ul>
+      </div>
+
+<div class="content-card glass">
+        <h3>👨🏻‍✈️ Real-World Vision System</h3>
+        <p>24/7 Camera Heartbeat: Operates with a heartbeat cycle every 30 seconds.</p>
+        <ul>
+          <li>Safety Watchdog.</li>
+          <li>Threat & Accident Detection.</li>
+          <li>Crime Prevention Mode.</li>
+	  <li>Privacy-Secured Vision.</li>
+	  <li>Autonomous Protection providing continuous awareness and proactive safety intervention..</li>
+        </ul>
+      </div>
+
+<div class="content-card glass">
+        <h3>🆘 Emergency & Signal-Free Communication</h3>
+        <p>Offline Rescue Mode even zero signal situations.</p>
+        <ul>
+          <li>One-Button Alert longitude
+		shares user latitude and longitude to nearby Sherin devices.</li>
+          <li>Air-Broadcast Channel.</li>
+          <li>Autonomous Safety remains active without internet or telecom dependency.</li>
+        </ul>
+      </div>
+
+ 	<div class="content-card glass">
+        <h3>📒 Universal Canvas + Collaborative Chat Room</h3>
+        <p>Multi-Language Execution: PowerShell, Termux, CMD, VB, Python, JS, HTML, XML, macOS shell, and Android scripts all run natively within one unified Sherin environment..</p>
+        <ul>
+          <li>Zero Backend Dependency.</li>
+          <li>Collaborative Development.</li>
+          <li>AI-Assisted Creation.</li>
+	<li>Cross-Platform Access.</li>
+	<li>Universal Canvas empowers everyone to contribute, learn, and build together.</li>
+        </ul>
+       </div>
+
+       <div class="content-card glass">
+        <h3>🎧 Audiosense, Intelligent Ambient Music Recognition.</h3>
+        <p>Privacy-first, consent-driven recognition. It listens intelligently, never continuously, and never stores raw sound.</p>
+        <ul>
+          <li>Adaptive Listening 5 seconds every 30 seconds, gated by RMS threshold.</li>
+          <li>Privacy by Design with SHA-256 fingerprint.</li>
+          <li>Instant Feedback in 1–3 second toast popup.</li>
+	<li>Consent & Control approval logged in privacy and policy..</li>
+	<li>Enables real-time contextual media tagging.</li>
+	</ul>
+       </div>
+
+	<div class="content-card glass">
+        <h3> 📡 Sherin Connectivity — Zero-Signal Data Exchange.</h3>
+        <p>Sherin Connectivity introduces a new era of communication enabling data transfer without any traditional signal.</p>
+        <ul>
+          <li>Signal-Free Transmission.</li>
+          <li>High-Speed Link achieves up to 300 Mbps within a 1 km line-of-sight range.</li>
+          <li>Device-to-Device Mesh, encrypted communication between nearby allowed devices.</li>
+	<li>Car-Link Integration interact securely with Sherin devices.</li>
+	<li>User-to-User Chat built-in peer communication layer with Sherin Connectivity.</li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- File System Section -->
+  <section id="filesystem" class="glass">
+    <h2 class="section-title">Secure Hash File System SHFS</h2>
+    <p class="section-subtitle"><i>Content-addressed, immutable storage with military-grade encryption</i></p>
+    <p style="text-align:center; color:rgba(255,255,255,0.7); margin-bottom:20px; max-width:900px; margin-left:auto; margin-right:auto;">
+      Sherin OS uses the SHFS (Secure‑Hash File System) to protect all critical data. 
+      SHFS stores information in an encrypted, TPM‑sealed container that is mounted only by the trusted Sherin OS service. 
+      The file system maintains a built-in cryptographic hash chain and signs every change with a hardware-protected key. 
+      Because the container is encrypted at rest, the mounting point is hidden from ordinary users and the operating system. 
+      Every modification is logged in an immutable, tamper-evident audit trail, any attempt to alter SHFS data will be detected immediately. 
+      While no system can be made absolutely un-breakable, SHFS makes unauthorized tampering extremely difficult and provably detectable, providing the highest practical level of data integrity and confidentiality for the platform.
+      <br><i>🕊️Sherin OS engineering team🕊️</i></br>
+    </p>
+
+    <div class="content-grid">
+      <div class="content-card glass">
+        <h3>🔐 Encryption</h3>
+        <p>Every cube encrypted with AES-256-GCM and signed with Ed25519 public-key cryptography.</p>
+        <ul>
+          <li>Per-cube encryption keys</li>
+          <li>Hardware salt derivation</li>
+          <li>Forward secrecy guaranteed</li>
+        </ul>
+      </div>
+
+      <div class="content-card glass">
+        <h3>📋 Audit Chain</h3>
+        <p>Merkle tree structure creates tamper-evident logs for every write operation.</p>
+        <ul>
+          <li>SHA-256 hash chains</li>
+          <li>256-byte immutable entries</li>
+          <li>Instant tamper detection</li>
+        </ul>
+      </div>
+
+      <div class="content-card glass">
+        <h3>🗂️ Content Addressing</h3>
+        <p>Files identified by cryptographic hash, enabling deduplication and verification.</p>
+        <ul>
+          <li>Automatic deduplication</li>
+          <li>Zero data corruption</li>
+          <li>Efficient delta updates</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Section -->
+  <section id="security" class="glass">
+    <h2 class="section-title">Ultra-Secure Defense Protocols</h2>
+    <p class="section-subtitle">
+      <i>Every component cryptographically verified, audited, and immutable. Zero-trust by design.</i>
+    </p>
+
+    <div class="security-features">
+      <div class="security-item glass">
+        <h4>🔐 Zero-Payload Protocol</h4>
+        <p>Only IDs travel on network. Actual data stays encrypted locally. Intercepted packets are meaningless hashes.</p>
+	<ul>
+        <li>Maximum privacy through data isolation.</li>
+        <li>Attackers receive only meaningless hashes.</li>
+        <li>Prevents unauthorized extraction of user content.</li>
+      </ul>
+      </div>
+
+      <div class="security-item glass">
+        <h4>🔒 Ed25519 Signatures</h4>
+        <p>Every bundle and update signed. Public key in TPM. Unsigned code automatically rejected.</p>
+	<ul>
+        <li>Unsigned or altered code instantly rejected.</li>
+        <li>Prevents fake updates and supply-chain attacks.</li>
+        <li>Lightweight and future-proof signature scheme.</li>
+      </ul>
+      </div>
+
+      <div class="security-item glass">
+        <h4>🛡️ AES-256-GCM</h4>
+        <p>All storage encrypted with per-cube keys derived from password + hardware salt.</p>
+	<ul>
+        <li>Authenticated encryption prevents silent corruption.</li>
+        <li>Keys cannot be reused or extracted.</li>
+        <li>Instant-wipe capability for emergency protection.</li>
+      </ul>
+      </div>
+
+      <div class="security-item glass">
+        <h4>📋 Merkle Audit</h4>
+        <p>Append-only ledger with SHA-256 chains. Every write creates immutable entry.</p>
+        <ul>
+        <li>Immutable logs—no entry can be deleted or altered.</li>
+        <li>Chain verification exposes manipulation instantly.</li>
+        <li>Perfect for compliance and long-term accountability.</li>
+      </ul>
+      </div>
+
+      <div class="security-item glass">
+        <h4>🚨 Policy Engine</h4>
+        <p>AI-powered intent detection blocks hacking, fraud, violence before execution. 99% prevention rate.</p>
+	<ul>
+        <li>Stops hacking, fraud, or unsafe actions in real time.</li>
+        <li>Adaptive rules that learn user safety preferences.</li>
+        <li>Over 99% prevention rate for high-risk operations.</li>
+      </ul>
+      </div>
+
+      <div class="security-item glass">
+     <h4>💫 Stellar System </h4>
+        <p>Sherin operates like a living star, autonomously collecting data from trusted sources to ensure 100% genuine, accurate information and upgrade itself.</p>
+        <ul>
+          <li>Method: Data Harvesting</li>
+          <li>Source: data that complies with privacy policies and regulations, ensuring ethical and legal operation</li>
+          <li>Self-Upgrade System: C-I-D</li>
+        </ul>
+      </div>
+  </section>
+
+  
+
+  <!-- Footer -->
+  <footer id="hololink" class="glass" style="text-align:center;padding:40px 5%;margin-top:100px">
+    <h3 style="margin-bottom:20px">Ready to Build the Future?</h3>
+    <p style="margin-bottom:30px;color:rgba(255,255,255,.7)">
+      Sherin AI is in active development. Join us in creating the most secure, private, and intelligent edge-AI platform.
+    </p>
+    <p><h3 style="margin-bottom:20px">HoloLink – Data & Logs Persistence</h3></ p>
+ Sherin connects with a dedicated hardware companion called HoloLink.
+It includes encoders, sensors, and joystick modules, designed for manual or physical interaction when required. 
+The unit resembles a lightweight head-mounted interface — providing real-time feedback and spatial control, similar to futuristic assistant gear.
+A hybrid control device inspired by wearable intelligence. 
+   <br> <div class="cta-buttons">
+      <a href="mailto:info@sherin.tech" class="btn btn-secondary">📧 Contact Us</a>
+      <a href="https://github.com/rafeez1819/SHERIN_AI-OS-FS/blob/main/README.md" class="btn btn-secondary">View on GitHub</a>
+    </div>
+    <p style="margin-top:40px;color:rgba(255,255,255,.4)">© 2025 Sherin.tech – All rights reserved.</p>
+  </footer></br>
+
+  <script>
+  const introOverlay = document.getElementById('intro-overlay');
+  const introVideo = document.getElementById('intro-video');
+
+  function hideIntro() {
+    if (!introOverlay.classList.contains('fade-out')) {
+      introOverlay.classList.add('fade-out');
+      setTimeout(() => {
+        introOverlay.style.display = 'none';
+      }, 500);
+    }
+  }
+
+  // Skip intro on click
+  introOverlay.addEventListener('click', hideIntro);
+
+  // When video ends naturally
+  introVideo.addEventListener('ended', hideIntro);
+
+  // Auto-skip at middle of the video
+  introVideo.addEventListener('timeupdate', () => {
+    if (introVideo.currentTime >= introVideo.duration / 2) {
+      hideIntro();
+    }
+  });
+
+    // Mobile Menu
+    const menuBtn = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          navLinks.classList.remove('open');
+        }
+      });
+    });
+
+    // Pause stats animation on hover
+    const statsScroll = document.querySelector('.stats-scroll');
+    if (statsScroll) {
+      statsScroll.addEventListener('mouseenter', () => {
+        statsScroll.style.animationPlayState = 'paused';
+      });
+      statsScroll.addEventListener('mouseleave', () => {
+        statsScroll.style.animationPlayState = 'running';
+      });
+    }
+  </script>
+</body>
+</html>
+
+  
