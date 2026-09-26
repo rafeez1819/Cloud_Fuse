@@ -1,6 +1,6 @@
 # CloudFuse
 
-<img width="1920" height="1454" alt="Screemshot" src="https://github.com/user-attachments/assets/ceaec6d2-a9c0-46c6-9735-79a5c071fcc8" />
+<img width="1913" height="915" alt="image" src="https://github.com/user-attachments/assets/3d62d90f-f3de-40ac-ad9b-3d23f7b12b5c" />
 
 
 A unified virtual drive: sign in once, and Google Drive, OneDrive, Dropbox and
